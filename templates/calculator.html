@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Stroke</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='assets/css/styles.css') }}">
+  </head>
+  <body>
+   <!--Navigation Bar-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/">Stroke Prevention</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+           
+           
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                High Risk Factors
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="Factor1">Location </a>
+                <a class="dropdown-item" href="Factor2">Demographics</a>
+                <a class="dropdown-item" href="Factor3">Society Issues</a>
+                <a class="dropdown-item" href="Factor4">Health Issues</a>
+              </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="calculator">Calculator</a>
+              </li>
+              
+          </ul>
+        </div>
+      </nav>
+
+
+
+            <div class="box">
+              <h5 class="title">Stroke Probability Predictor</h5>
+              <hr></hr>
+                    <h6>Input your information to determine your probability of having a stroke.</h6>
+
+                    <form action="calculator" method="POST">
+                      <fieldset>
+                          <legend>Input values:</legend>
+                          Age:
+                          <input name="age" type="number" required>
+                          <br>
+                          <br> Gender:
+                          <select name = "gender">
+                            <option value="female">Female</option>
+                            <option value="male">Male</option>
+                            <option value="other">Other</option>
+                          </select>
+                          <br>
+                          <br> Have you ever been married?:
+                          <select name = "married">
+                            <option value="marriedYes">Yes</option>
+                            <option value="marriedNo">No</option>
+                          </select>
+                          <br>
+                          <br> Hypertension:
+                          <select name = "hypertension">
+                            <option value="hyperYes">Yes</option>
+                            <option value="hyperNo">No</option>
+                          </select>
+                          <br>
+                          <br> Heart Disease:
+                          <select name = "hd">
+                            <option value="HDYes">Yes</option>
+                            <option value="HDNo">No</option>
+                          </select>
+                          <br>
+                          <br> Smoking Status:
+                          <select name = "smokestatus">
+                            <option value="smokes">Currently Smoke</option>
+                            <option value="formerSmoker">Formerly Smoked</option>
+                            <option value="neverSmoked">Never Smoked</option>
+                            <option value="unknownSmoke">Prefer Not to Answer</option>
+                          </select>
+                          <br>
+                          <br>Average Glucose Level:
+                          <input name="glucose" type="number" required>
+                          <br>
+                          <br>BMI:
+                          <input name="bmi" type="number" required>
+                          <br>
+                          <br><input type="submit">
+                      </fieldset>
+                  </form>
+              
+                    <div class="result">
+                      
+                          <br>
+                          <br> Probability of Having a Stroke:
+                            <li> {{ result }} </li>
+                            <script>console.log("{{ result }}")</script>
+                      
+              </div>
+    
+    
+            </div>
+          
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  
+
+
+</body>
+</html>

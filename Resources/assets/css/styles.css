@@ -1,0 +1,86 @@
+form {
+    margin: auto;
+    width: 35%;
+}
+.result {
+    margin: auto;
+    width: 35%;
+    border: 1px solid #ccc;
+}
+body{
+    background-color: #920707; 
+}
+
+.navbar{
+    max-height: 57px; 
+}
+.navigation .navbar-brand{
+    color: white; 
+    margin-left: 30px; 
+    padding: inherit; 
+    font-weight: bold; 
+    background-color: #e96d6d;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.navbar{
+    background-color: rgb(164, 197, 206); 
+    font-size: 15px; 
+}
+.active, .dropdown-menu .dropdown-item:active a:hover{
+    background-color:#E7E7E7; 
+}
+.dropdown-item{
+    color: #6D8092; 
+}
+.dropdown .dropdown-menu .dropdown-item:active, .dropdown .dropdown-menu .dropdown-item:hover{
+    background-color:#E7E7E7; 
+}
+.nav-link:hover{
+    background-color:#920707;
+   }
+a{
+    color: #6D8092;
+    font-size: 15px; 
+}
+
+
+.navbar-brand:hover{
+color: rgb(175, 175, 175);
+}
+
+
+
+.title{
+    color: #2320ca;  
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold; 
+    padding-top: 50px; 
+}
+
+p{
+ color: #030b13;
+ font-family: Arial, Helvetica, sans-serif;
+ font-size: 20px; 
+}
+
+img{
+    width:100%;
+    height:100%;
+}
+.active, .panel:hover{
+    border-color:#cc0909;
+    border-style: solid; 
+    
+}
+.vizualization{
+    widows: 60%;
+    height:60%;
+}
+.box {
+    margin-top: 60px; 
+    margin-bottom: 62px; 
+    padding: 10px 20px 15px; 
+    color:black;
+    background-color: white; 
+
+  }
