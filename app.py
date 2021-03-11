@@ -35,6 +35,7 @@ def factorcheck4():
 @app.route('/calculator', methods=['GET', 'POST'])
 def comparison():
     if request.method == 'GET':
+
         return render_template('calculator.html')
     
 
@@ -100,11 +101,21 @@ def comparison():
             smokingUnknown, smokingFormer, smokingNever, smokes]], columns = ['age', 'hypertension', 'heart_disease', 'avg_glucose_level',
             'bmi', 'gender_Female', 'gender_Male', 'gender_Other', 'ever_married_No', 'ever_Married_Yes', 'smoking_status_Unknown',
             'smoking_status_formerlysmoked', 'smoking_status_neversmoked', 'smoking_status_smokes'])
+
         prediction = model.predict_proba(inputs)[0]
         prediction1 = str(round(prediction[1]*100,2)) + "%"
 
+        input_age = request.form['age']
+        input_hypertension = request.form['hypertension']
+        input_hd = request.form['hd']
+        input_bmi = request.form['bmi']
+        input_gender = request.form['gender']
+        input_married = request.form['married']
+        input_smokestatus = request.form['smokestatus']
 
-        return render_template("calculator.html",result=prediction1)
+        inputs2 = [input_age,input_hypertension,input_hd,input_bmi,input_gender,input_married,input_smokestatus]
+
+        return render_template("calculator.html",result=prediction1, result2=inputs2)
 
 if __name__ == '__main__':
     app.run()
