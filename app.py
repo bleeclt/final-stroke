@@ -45,53 +45,66 @@ def comparison():
 
         if request.form['hypertension'] == "hyperYes":
             hypertension = 1
+            input_hypertension = "Yes"
         else:
             hypertension = 0
+            input_hypertension = "No"
 
         if request.form['hd'] == "HDYes":
             heart_disease = 1
+            input_hd = "Yes"
         else:
             heart_disease = 0
+            input_hd = "No"
 
         avgglucose = request.form['glucose']
         bmi = request.form['bmi']
 
         if request.form['gender'] == "female":
+            input_gender = "Female"
             female = 1
             male = 0
             other = 0
         elif request.form['gender'] == "male":
+            input_gender = "Male"
             female = 0
             male = 1
             other = 0
         else:
+            input_gender = "Other"
             female = 0
             male = 0
             other = 1
 
         if request.form['married'] == "marriedYes":
+            input_married = "Yes"
             marriedNo = 0
             marriedYes = 1
         else:
+            input_married = "No"
             marriedNo = 1
             marriedYes = 0
         
         if request.form['smokestatus'] == "smokes":
+            input_smokestatus = "smokes"
             smokingUnknown = 0
             smokingFormer = 0
             smokingNever = 0
             smokes = 1
         elif request.form['smokestatus'] == "formerSmoker":
+            input_smokestatus = "Former Smoker"
             smokingUnknown = 0
             smokingFormer = 1
             smokingNever = 0
             smokes = 0
         elif request.form['smokestatus'] == "neverSmoked":
+            input_smokestatus = "Never Smoked"
             smokingUnknown = 0
             smokingFormer = 0
             smokingNever = 1
             smokes = 0
         else:
+            input_smokestatus = "Unknown"
             smokingUnknown = 1
             smokingFormer = 0
             smokingNever = 0
@@ -105,15 +118,9 @@ def comparison():
         prediction = model.predict_proba(inputs)[0]
         prediction1 = str(round(prediction[1]*100,2)) + "%"
 
-        input_age = request.form['age']
-        input_hypertension = request.form['hypertension']
-        input_hd = request.form['hd']
-        input_bmi = request.form['bmi']
-        input_gender = request.form['gender']
-        input_married = request.form['married']
-        input_smokestatus = request.form['smokestatus']
+    
 
-        inputs2 = [input_age,input_hypertension,input_hd,input_bmi,input_gender,input_married,input_smokestatus]
+        inputs2 = {"Age": age, "Gender": input_gender, "Ever Married": input_married, "Hypertension": input_hypertension, "Heart Disease": input_hd, "Smoking Status": input_smokestatus, "Glucose": avgglucose, "BMI": bmi}
 
         return render_template("calculator.html",result=prediction1, result2=inputs2)
 
