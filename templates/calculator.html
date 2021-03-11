@@ -100,16 +100,19 @@
               
                     <div class="result">
                       
-                          <br>
-                          <br> User Inputs:
-                          {% if result2 %}
-                          {% for variable, value in inputs2.items() %}
-                              <b>{{ variable }}</b> : {{ value }}
-                          {% endfor %}
-                            <script>console.log("{{ result2 }}")</script>
+    
+                          {% if result %}
+                              {% for variable, value in inputs2.items() %}
+                                  <b>{{ variable }}</b> : {{ value }} <br>
+                              {% endfor %}
+                              <br>
+                          {% endif %}
+                         Probability of Having a Stroke:
+                          <p style="font-size:30px">{{ result }}</p>
+                            <!-- <script>console.log("{{ result2 }}")</script>
                           <br> Probability of Having a Stroke:
                             <li> {{ result }} </li>
-                            <script>console.log("{{ result }}")</script>
+                            <script>console.log("{{ result }}")</script> -->
                       
               </div>
     

@@ -122,7 +122,8 @@ def comparison():
 
         inputs2 = {"Age": age, "Gender": input_gender, "Ever Married": input_married, "Hypertension": input_hypertension, "Heart Disease": input_hd, "Smoking Status": input_smokestatus, "Glucose": avgglucose, "BMI": bmi}
 
-        return render_template("calculator.html",result=prediction1, result2=inputs2)
+        return render_template("calculator.html", inputs2 = {"Age": age, "Gender": input_gender, "Ever Married": input_married, "Hypertension": input_hypertension, "Heart Disease": input_hd, "Smoking Status": input_smokestatus, "Glucose": avgglucose, "BMI": bmi},
+ result=prediction1)
 
 if __name__ == '__main__':
     app.run()
