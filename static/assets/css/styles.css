@@ -1,14 +1,29 @@
 form {
-    margin: auto;
-    width: 35%;
-}
+    background-color: #dfe2df;
+    border: none;
+    color: rgb(14, 7, 7);
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 77px 2px;
+    cursor: pointer;
+    
+  }
+
+.column {
+    float: left;
+    width: 30%;
+} 
+
 .result {
+    background-color: #dfe2df;
+    color: rgb(14, 7, 7);
+    padding: 16px 32px;
     margin: auto;
-    width: 35%;
-    border: 1px solid #ccc;
+    
+    
 }
 body{
-    background-color: #920707; 
+    background-color: #247cce; 
 }
 
 .navbar{
@@ -52,6 +67,7 @@ color: rgb(175, 175, 175);
 
 .title{
     color: #1e1e1f;  
+    font-size: 50px;
     font-family: fantasy, 'Star Wars';
     font-weight: bold; 
     padding-top: 50px; 
@@ -82,6 +98,8 @@ img{
     margin-bottom: 62px; 
     padding: 10px 20px 15px; 
     color:black;
-    background-color: white; 
+    background-color: #FFFFFF; 
 
   }
+
+

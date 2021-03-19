@@ -48,39 +48,39 @@
               <h5 class="title">Stroke Probability Predictor</h5>
               <hr></hr>
                     <h6>Input your information to determine your probability of having a stroke.</h6>
-
+                    <div class="column">
                     <form action="calculator" method="POST">
                       <fieldset>
                           <legend>Input values:</legend>
-                          Age:
+                          <a href="Factor4" data-toggle="tooltip" title="Age impacts Stroke Probability, according to our data it is the 4th leading Factor.">Age:</a>
                           <input name="age" type="number" required>
                           <br>
-                          <br> Gender:
+                          <br> <a href="Factor2" data-toggle="tooltip" title="Gender impacts Stroke Probability, according to our data it is the 3rd leading Factor.">Gender:</a>
                           <select name = "gender">
                             <option value="female">Female</option>
                             <option value="male">Male</option>
                             <option value="other">Other</option>
                           </select>
                           <br>
-                          <br> Have you ever been married?:
+                          <br> <a href="Factor3" data-toggle="tooltip" title="Marriage Status impacts Stroke Probability, according to our data it is the 2nd leading Factor. This is typically due to the Stress of being Married.">Have you ever been married?:</a>
                           <select name = "married">
                             <option value="marriedYes">Yes</option>
                             <option value="marriedNo">No</option>
                           </select>
                           <br>
-                          <br> Hypertension:
+                          <br> <a href="Factor4" data-toggle="tooltip" title="Hypertension impacts Stroke Probability, according to our data it is the 5th leading Factor on this calculator.">Hypertension:</a>
                           <select name = "hypertension">
                             <option value="hyperYes">Yes</option>
                             <option value="hyperNo">No</option>
                           </select>
                           <br>
-                          <br> Heart Disease:
+                          <br> <a href="Factor4" data-toggle="tooltip" title="Heart Diesase impacts Stroke Probability the most; according to our Data it has the largest impact on likelihood of having a Stroke. ">Heart Disease:</a>
                           <select name = "hd">
                             <option value="HDYes">Yes</option>
                             <option value="HDNo">No</option>
                           </select>
                           <br>
-                          <br> Smoking Status:
+                          <br> <a href="Factor3" data-toggle="tooltip" title="Smoking impacts Stroke Probability, however, according to our data it is the least impactful factor on this Calculator.">Smoking Status:</a>
                           <select name = "smokestatus">
                             <option value="smokes">Currently Smoke</option>
                             <option value="formerSmoker">Formerly Smoked</option>
@@ -88,16 +88,18 @@
                             <option value="unknownSmoke">Prefer Not to Answer</option>
                           </select>
                           <br>
-                          <br>Average Glucose Level:
+                          <br><a href="Factor4" data-toggle="tooltip" title="Glucose Levels impacts Stroke Probability as this can be an idicator of Diabetes. According to our Data, Glucose levels are ranked 6th in importance.">Average Glucose Level:</a>
                           <input name="glucose" type="number" required>
                           <br>
-                          <br>BMI:
+                          <br><a href="Factor4" data-toggle="tooltip" title="BMI impacts Stroke Probability, according to our Data it is ranked 7th in importance.">BMI:</a>
                           <input name="bmi" type="number" required>
                           <br>
                           <br><input type="submit">
                       </fieldset>
                   </form>
-              
+                </div>
+              </div>
+              <div class="column">
                     <div class="result">
                       
     
@@ -107,17 +109,14 @@
                               {% endfor %}
                               <br>
                           {% endif %}
-                         Probability of Having a Stroke:
-                          <p style="font-size:30px">{{ result }}</p>
-                            <!-- <script>console.log("{{ result2 }}")</script>
-                          <br> Probability of Having a Stroke:
-                            <li> {{ result }} </li>
-                            <script>console.log("{{ result }}")</script> -->
+                         <b>Probability of Having a Stroke:</b>
+                          <p style="font-size:40px">{{ result }}</p>
+                           
                       
               </div>
+    </div>
     
-    
-            </div>
+            
           
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
