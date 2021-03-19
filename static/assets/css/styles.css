@@ -11,14 +11,14 @@ form {
 
 .column {
     float: left;
-    width: 30%;
+    width: 28%;
 } 
 
 .result {
     background-color: #dfe2df;
     color: rgb(14, 7, 7);
     padding: 16px 32px;
-    margin: auto;
+    margin: auto 2px;
     
     
 }
@@ -99,7 +99,10 @@ img{
     padding: 10px 20px 15px; 
     color:black;
     background-color: #FFFFFF; 
-
   }
+
+a {
+    color:black;
+}
 
 
