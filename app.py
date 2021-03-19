@@ -118,12 +118,14 @@ def comparison():
         prediction = model.predict_proba(inputs)[0]
         prediction1 = str(round(prediction[1]*100,2)) + "%"
 
-    
+        int_age = int(age)
+        predicted_age = round(0.00007*(int_age**3)-0.0025*(int_age**2)+0.032*int_age,2)
+        predicted_age_str = str(predicted_age) + "%"
 
-        inputs2 = {"Age": age, "Gender": input_gender, "Ever Married": input_married, "Hypertension": input_hypertension, "Heart Disease": input_hd, "Smoking Status": input_smokestatus, "Glucose": avgglucose, "BMI": bmi}
+        # inputs2 = {"Age": age, "Gender": input_gender, "Ever Married": input_married, "Hypertension": input_hypertension, "Heart Disease": input_hd, "Smoking Status": input_smokestatus, "Glucose": avgglucose, "BMI": bmi}
 
         return render_template("calculator.html", inputs2 = {"Age": age, "Gender": input_gender, "Ever Married": input_married, "Hypertension": input_hypertension, "Heart Disease": input_hd, "Smoking Status": input_smokestatus, "Glucose": avgglucose, "BMI": bmi},
- result=prediction1)
+ result=prediction1, predicted_age = predicted_age_str)
 
 if __name__ == '__main__':
     app.run()

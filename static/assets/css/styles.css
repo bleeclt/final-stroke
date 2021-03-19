@@ -11,7 +11,7 @@ form {
 
 .column {
     float: left;
-    width: 28%;
+    width: 33%;
 } 
 
 .result {
@@ -19,9 +19,14 @@ form {
     color: rgb(14, 7, 7);
     padding: 16px 32px;
     margin: auto 2px;
-    
-    
+}    
+#graph {
+    background-color: #dfe2df;
+    color: rgb(14, 7, 7);
+    padding: 16px 32px 0px;
+    margin: auto 2px;
 }
+
 body{
     background-color: #247cce; 
 }
@@ -70,7 +75,7 @@ color: rgb(175, 175, 175);
     font-size: 50px;
     font-family: fantasy, 'Star Wars';
     font-weight: bold; 
-    padding-top: 50px; 
+    padding-top: 20px; 
 }
 
 p{
@@ -85,7 +90,7 @@ img{
 }
 
 .active, .panel:hover{
-    border-color:#cc0909;
+    border-color:black;
     border-style: solid; 
     
 }

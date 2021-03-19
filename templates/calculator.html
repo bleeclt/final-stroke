@@ -112,13 +112,22 @@
                           {% endif %}
                          <b>Probability of Having a Stroke:</b>
                           <p style="font-size:40px">{{ result }}</p>
+                          <br>
+                          <b>Average Stroke Probability for your Age:</b>
+                          <p style="font-size:40px">{{ predicted_age }}</p>
                            
                       
                     </div>
               </div>
               
-              <div class="column">
-                <img src="{{ url_for('static',filename='assets/images/image.png') }}" class="panel">
+              <div class="column" id = "graph">
+               
+                <img src="{{ url_for('static',filename='assets/images/image.png') }}">
+                <br>
+                <p style="font-size:17px">The probability of having a stroke naturally increases with age. The graph above shows the average risk of having a stroke by age. 
+                  See how your results compare to others in your age group. If you're at a higher risk than other people your age, talk with your doctor about improving
+                controllable health factors such as hypertension, heart disease, high glucose, high BMI, and smoking.</p>
+              
               </a></div>
 
     
